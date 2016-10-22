@@ -1,0 +1,35 @@
+//
+//  PrefixHeader.pch
+//  BeeQuick_One
+//
+//  Created by MinJing_Lin on 16/10/22.
+//  Copyright © 2016年 MinJing_Lin. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define LSCREENW  [[UIScreen mainScreen] bounds].size.width
+#define LSCREENH [[UIScreen mainScreen] bounds].size.height
+#import "Masonry.h"
+#import "MJRefresh.h"
+#import "MJExtension.h"
+#import "UIImage+Color.h"
+#import "UIImageView+Extention.h"
+
+#define WEAKSELf __weak typeof(self) weakSelf = self;
+
+
+#define COLOR_BG [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1.0]
+#define COLOR_Line [UIColor colorWithRed:220/255.0 green:220/255.0 blue:220/255.0 alpha:1.0]
+#define COLOR_YELLOW [UIColor colorWithRed:253/255.0 green:212/255.0 blue:49/255.0 alpha:1.0]
+
+/***  普通字体 */
+#define kFont(size) [UIFont systemFontOfSize:size]
+/***  粗体 */
+#define kBoldFont(size) [UIFont boldSystemFontOfSize:size]
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
