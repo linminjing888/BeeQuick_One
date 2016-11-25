@@ -80,14 +80,14 @@
 }
 -(void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
 {
-    if (!self.isScrollDown && [self.delegate respondsToSelector:@selector(willDislayHeaderView:)])
+    if (!self.isScrollDown && tableView.dragging && [self.delegate respondsToSelector:@selector(willDislayHeaderView:)])
     {
         [self.delegate willDislayHeaderView:section];
     }
 }
 -(void)tableView:(UITableView *)tableView didEndDisplayingHeaderView:(UIView *)view forSection:(NSInteger)section
 {
-    if (self.isScrollDown && [self.delegate respondsToSelector:@selector(didEndDislayHeaderView:)])
+    if (self.isScrollDown && tableView.dragging && [self.delegate respondsToSelector:@selector(didEndDislayHeaderView:)])
     {
         [self.delegate didEndDislayHeaderView:section];
     }
